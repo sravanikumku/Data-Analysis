@@ -92,4 +92,87 @@ Append vertically : [[ 1  2  3]
 Append horizontally : [[ 1  2  3 10]
  [ 4  5  6 20]]
  
+ #5
+a=np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(a)
+print("Indexing :",a[2][1])
+k=a[:,:2]
+print("Slicing :",k)
  
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+Indexing : 8
+Slicing : [[1 2]
+ [4 5]
+ [7 8]]
+ 
+#6
+a=np.array([12,2,13,45,17,8,5])
+print(a)
+print("min :",np.min(a))
+print("max :",np.max(a))
+print("mean :",np.mean(a))
+print("median :",np.median(a))
+print("sd :",np.std(a))
+
+[12  2 13 45 17  8  5]
+min : 2
+max : 45
+mean : 14.571428571428571
+median : 12.0
+sd : 13.275725891987365
+
+#7
+m1=np.array([[8,4,6],[3,2,1],[10,2,6]])
+m2=np.array([[5,3,8],[1,8,2],[9,0,2]])
+m_dot=np.dot(m1,m2)
+print("dot :",m_dot)
+m_mat=np.matmul(m1,m2)
+print("matrix product :",m_mat)
+
+dot : [[ 98  56  84]
+ [ 26  25  30]
+ [106  46  96]]
+matrix product : [[ 98  56  84]
+ [ 26  25  30]
+ [106  46  96]]
+ 
+ #8
+m1=np.array([[8,4,6],[3,2,1],[10,2,6]])
+e_values,evectors=np.linalg.eig(m1)
+print("eigen values :",e_values)
+
+eigen values : [15.72728833 -1.38272546  1.65543713]
+
+#9
+m1=np.array([[3,1],[1,2]])
+m2=np.array([9,8])
+s=np.linalg.solve(m1,m2)
+print("Solution of linear matrix equation :",s)
+
+Solution of linear matrix equation : [2. 3.]
+
+#10
+a=np.array([[8,4,6],[3,2,1],[10,2,6]])
+inv_a=np.linalg.inv(a)
+print("Inverse",inv_a)
+
+Inverse [[-0.27777778  0.33333333  0.22222222]
+ [ 0.22222222  0.33333333 -0.27777778]
+ [ 0.38888889 -0.66666667 -0.11111111]]
+ 
+ #11
+ 
+a=np.array([[8,4,6],[3,2,1],[10,2,6]])
+rank=np.linalg.matrix_rank(a)
+print("Rank of a matrix :",rank)
+
+ Rank of a matrix : 3
+ 
+ #12
+ a=np.array([[8,4,6],[3,2,1],[10,2,6]])
+det=np.linalg.det(a)
+print("det :",det)
+
+det : -36.0
